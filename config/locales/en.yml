@@ -28,8 +28,12 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
-  title: "E-Learning"
-  
+  logo: "E-Learning"
+  help: "Help"
+  home: "Home"
+  login: "Login"
+  name: "Copyright by BuiToan"
+  guide: "Để sử dụng hệ thống bạn vui lòng đăng nhập, nếu chưa có tài khoản thì đăng ký"
+  introduction: "Chào Mừng Bạn Đã Đến Với Website Của Toan"
+  signup: "Signup"
