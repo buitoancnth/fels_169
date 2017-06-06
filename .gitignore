@@ -23,7 +23,4 @@ bower.json
 
 .byebug_history
 /config/database.yml
-<<<<<<< HEAD
 /test/*
-=======
->>>>>>> 67911afd0554c1f46005b3023aaa4ccc1b0f6af4
