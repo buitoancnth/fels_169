@@ -15,4 +15,8 @@ class User < ApplicationRecord
     uniqueness: {case_sensitive: false}
   has_secure_password
   validates :password, presence: true, length: {minimum: Settings.min_password}, allow_nil: true
+
+  def downcase_email
+    self.email = email.downcase
+  end
 end

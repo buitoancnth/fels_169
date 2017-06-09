@@ -37,3 +37,7 @@ en:
   guide: "Để sử dụng hệ thống bạn vui lòng đăng nhập, nếu chưa có tài khoản thì đăng ký"
   introduction: "Chào Mừng Bạn Đã Đến Với Website Của Toan"
   signup: "Signup"
+  error: "error"
+  contain: "The form contains "
+  create: "Create my account"
+  notuser: "user not in database"
