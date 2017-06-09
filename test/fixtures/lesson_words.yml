@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  word_id: 
+  lesson_id: one
+  word_answer_id: one
+
+two:
+  word_id: 
+  lesson_id: two
+  word_answer_id: two
