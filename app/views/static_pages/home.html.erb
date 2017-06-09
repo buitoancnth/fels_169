@@ -1,9 +1,9 @@
-<% provide(:title,t("home")) %>
+<% provide :title,t("home") %>
 <center>
   <div class="center jumbotron">
-    <marquee><h2><%= t("introduction") %></h2></marquee>
+    <marquee><h2><%= t "introduction" %></h2></marquee>
     <h3>
-      <%= t("guide") %>
+      <%= t "guide" %>
     </h3>
     <br>
     <%= link_to t("signup"), "#", class: "btn btn-lg btn-primary" %>
