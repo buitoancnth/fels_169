@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-
   attr_accessor :remember_token
+
   has_many :activities, dependent: :destroy
   has_many :lessons
   has_many :active_relationships, class_name: Relationship.name,
