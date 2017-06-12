@@ -2,9 +2,9 @@
 @import "bootstrap";
 
 @mixin box_sizing {
-  -moz-box-sizing:    border-box;
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing:         border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -27,12 +27,12 @@ body {
 }
 /* footer */
 .dark-wrapper {
-    margin-top:100px;
-    background:#AFD788;
-    color:white;
-    font-size:20px;
-    font-weight:bold;
-    height:150px;
+  margin-top:100px;
+  background:#AFD788;
+  color:white;
+  font-size:20px;
+  font-weight:bold;
+  height:150px;
 }
 .dark-wrapper .ss-style-top::before {
     background-image:linear-gradient(315deg,#ed0121 50%,transparent 50%),linear-gradient(45deg,#ed0121 50%,transparent 50%);
@@ -104,7 +104,8 @@ input {
 h1 {
   text-align: center;
 }
-#error_explanation {
+
+.error_explanation {
   color: red;
   ul {
     color: red;
@@ -116,5 +117,19 @@ h1 {
   @extend .has-error;
   .form-control {
     color: $state-danger-text;
+  }
+}
+
+.login {
+  margin-top:100px;
+}
+.checkbox {
+  width: auto;
+  margin-left: 20px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 10px;
+    font-weight: normal;
   }
 }
