@@ -1,11 +1,2 @@
-<% provide :title,t("home") %>
-<center>
-  <div class="center jumbotron">
-    <marquee><h2><%= t "introduction" %></h2></marquee>
-    <h3>
-      <%= t "guide" %>
-    </h3>
-    <br>
-    <%= link_to t("signup"), signup_path, class: "btn btn-lg btn-primary" %>
-  </div>
-</center>
+<% provide :title, t("home") %>
+<%= render logged_in? ? "home_private" : "home_public" %>

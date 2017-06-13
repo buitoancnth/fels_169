@@ -118,3 +118,16 @@ h1 {
     color: $state-danger-text;
   }
 }
+.login {
+  margin-top:100px;
+}
+.checkbox {
+  width: auto;
+  margin-left: 20px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 10px;
+    font-weight: normal;
+  }
+}
