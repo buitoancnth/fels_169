@@ -3,4 +3,4 @@ max_email: 250
 min_password: 6
 max_size: 80
 size_small: 30
-users_per_pages: 10
+per_pages: 10
