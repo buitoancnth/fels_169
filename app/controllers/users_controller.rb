@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @activities = Activity.activities_by(@user.id).order_by_activity.paginate page: params[:page], per_page: Settings.per_pages
   end
 
   def create

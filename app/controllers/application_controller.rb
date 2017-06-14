@@ -33,7 +33,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def json_request?
-    request.format.json?
+  def make_activity action_type, content_action = nil, user = current_user
+    Activity.create! action_type: action_type,
+     content_action: content_action.base_resource, user_id: user.id
   end
+
 end

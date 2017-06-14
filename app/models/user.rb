@@ -61,4 +61,8 @@ class User < ApplicationRecord
   def following? other_user
     following.include?(other_user)
   end
+
+  def base_resource
+    text_show = "#{name}"
+  end
 end

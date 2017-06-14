@@ -5,6 +5,7 @@ class RelationshipsController < ApplicationController
 
   def create
     current_user.follow(@user)
+    make_activity t("follow"), @user
     respond_to do |format|
       format.html { redirect_to @user }
       format.js
@@ -13,6 +14,7 @@ class RelationshipsController < ApplicationController
 
   def destroy
     current_user.unfollow(@user)
+    make_activity t("unfollow"), @user
     respond_to do |format|
       format.html { redirect_to @user }
       format.js
