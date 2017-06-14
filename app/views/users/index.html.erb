@@ -1,0 +1,17 @@
+<% provide :title, t("users") %>
+<center><h2><%= t "users" %></h2></center>
+<div class="text-center">
+  <%= will_paginate @users %>
+</div>
+<table class= "table table-striped">
+  <tr>
+    <th><%= t :ID %></th>
+    <th><%= t :TenUser %></th>
+    <th><%= t :Email %></th>
+    <th><%= t :Type %></th>
+  </tr>
+  <%= render @users %>
+</table>
+<div class="text-center">
+  <%= will_paginate @users %>
+</div>

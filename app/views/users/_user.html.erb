@@ -1,0 +1,15 @@
+<tr>
+  <td><%= user.id %></td>
+  <td>
+    <%= link_to user do %>
+    <%= gravatar_for user, size: Settings.size_small %>
+    <%= user.name %>
+    <% end %>
+  </td>
+  <td>
+    <%= user.email %>
+  </td>
+  <td>
+    <%= user.is_admin ? t("admin") : t("user") %>
+  </td>
+</tr>
