@@ -1,0 +1,11 @@
+<tr>
+  <td><%= word.id %></td>
+  <td>
+    <%= word.content %>
+  </td>
+  <td>
+    <% word.answers.each do |ws| %>
+       <%= ws.content if ws.is_correct == true %>
+    <% end %>
+  </td>
+</tr>
