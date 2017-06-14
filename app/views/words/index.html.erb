@@ -1,5 +1,5 @@
  <% provide :title, t("word_list") %>
- <%= form_tag words_path, method: :get, remote: true, html: {id: "filter_form"} do %>
+ <%= form_tag words_path, method: :get, remote: true, html: {class: "filter_form"} do %>
   <div class="row">
     <div class="col-md-5 dropdown_cate">
     <%= select_tag :category_id,
