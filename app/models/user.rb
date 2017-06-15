@@ -15,6 +15,7 @@ class User < ApplicationRecord
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   has_secure_password
   validates :password, presence: true, length: {minimum: Settings.min_password}, allow_nil: true
+  scope :order_by_user, -> {order(created_at: :desc)}
 
   class << self
     def digest string
@@ -44,5 +45,20 @@ class User < ApplicationRecord
   def authenticated? remember_token
     return false if remember_digest.nil?
     BCrypt::Password.new(remember_digest).is_password?(remember_token)
+  end
+
+  # Follows a user.
+  def follow other_user
+    following << other_user
+  end
+
+  # Unfollows a user.
+  def unfollow other_user
+    following.delete(other_user)
+  end
+
+  # Returns true if the current user is following the other user.
+  def following? other_user
+    following.include?(other_user)
   end
 end
