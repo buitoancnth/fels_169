@@ -15,14 +15,14 @@
             <%= radio_button_tag :option, option, #name , gia tri
             (checked = true if params[:option] == option || params[:option]
             .nil? && index == 0) %><br>
-            <%= t "word.#{option}" %>
+            <%= t "#{option}" %>
           </label>
         </div>
       </div>
       <% end %>
     </div>
     <div class="col-md-1 btn_fil">
-      <%= submit_tag t("filter"), {class: "btn btn-primary"} %>
+      <%= f.submit t("filter"), {class: "btn btn-primary"} %>
     </div>
   </div>
 <% end %>

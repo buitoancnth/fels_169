@@ -34,3 +34,4 @@ en:
   please_login: "Please Login"
   categories: "Categories"
   start: "Start"
+  notcagetory: "Category not in database"
