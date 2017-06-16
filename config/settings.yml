@@ -4,3 +4,4 @@ min_password: 6
 max_size: 80
 size_small: 30
 per_pages: 10
+max_answer: 50
