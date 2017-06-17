@@ -1,10 +1,10 @@
  <% provide :title, t("word_list") %>
- <%= form_for words_path, method: :get, remote: true, html: {id: "filter_form"} do |f| %>
+ <%= form_tag words_path, method: :get, remote: true, html: {id: "filter_form"} do %>
   <div class="row">
     <div class="col-md-5 dropdown_cate">
     <%= select_tag :category_id,
       options_from_collection_for_select(@categories, :id, :name,
-        params[:category_id]), include_blank: t("word.all"), #params[:category_id] tso of id
+        params[:category_id]), include_blank: t("word.all"),
         class: "form-control" %>
     </div>
     <div class="col-md-6">
@@ -22,7 +22,7 @@
       <% end %>
     </div>
     <div class="col-md-1 btn_fil">
-      <%= f.submit t("filter"), {class: "btn btn-primary"} %>
+      <%= submit_tag t("filter"), {class: "btn btn-primary"} %>
     </div>
   </div>
 <% end %>
