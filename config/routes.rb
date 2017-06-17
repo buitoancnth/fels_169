@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
@@ -16,4 +17,8 @@ Rails.application.routes.draw do
   resources :relationships, only: [:create, :destroy]
   resources :words , only: [:index]
   resources :categories
+  resources :categories, only: [:index, :show] do
+    resources :lessons, only: [:create]
+  end
+  resources :lessons
 end
