@@ -3,8 +3,8 @@
   <div class="col-md-12">
     <div class="pull-right">
       <%= link_to category_lessons_path(@category), method: :post,
-        class: "btn btn-primary" do %>
-        <span class="glyphicon glyphicon-play"></span> <%= t :start_new_lesson %>
+      class: "btn btn-primary" do %>
+      <span class="glyphicon glyphicon-play"></span> <%= t :start_new_lesson %>
       <% end %>
     </div>
   </div>
@@ -12,17 +12,17 @@
 <hr/>
 <h3><%= t :lessons %></h3>
 <% if @lessons.any? %>
-  <table class="table table-hover">
-    <tr>
-      <th><%= t :lesson %></th>
-      <th><%= t :status %></th>
-      <th></th>
-    </tr>
-    <%= render @lessons %>
-  </table>
-  <div class="text-center">
-    <%= will_paginate @lessons %>
-  </div>
+<table class="table table-hover">
+  <tr>
+    <th><%= t :lesson %></th>
+    <th><%= t :status %></th>
+    <th></th>
+  </tr>
+  <%= render @lessons %>
+</table>
+<div class="text-center">
+  <%= will_paginate @lessons %>
+</div>
 <% else %>
-  <%= t :no_items_found %>
+<%= t :no_items_found %>
 <% end %>

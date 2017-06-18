@@ -11,13 +11,17 @@
     <br>
     <%= render "follow_form" if logged_in? %>
   </aside>
-  <div class="col-md-8 col-offset-2" style="margin-top: 10px;">
+  <div class="col-md-8 col-offset-2 panel-activity">
     <div class="panel panel-default">
       <div class="panel-heading text-center">Activity
         <%= link_to @user.name, @user %>
       </div>
-      <div class="panel-body">activity
+      <div class="panel-body">
+        <%= render "shared/activities", activities: @activities %>
       </div>
+      <div class="text-center">
+    <%= will_paginate @activities %>
+   </div>
     </div>
   </div>
 </div>

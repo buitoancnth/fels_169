@@ -7,7 +7,7 @@ class CategoriesController < ApplicationController
 
   def show
     @lessons = @category.lessons.user_start(current_user).paginate page: params[:page],
-      per_page: Settings.per_pages
+    per_page: Settings.per_pages
   end
 
   def load_category

@@ -22,5 +22,5 @@ Rails.application.routes.draw do
   resources :categories, only: [:index, :show] do
     resources :lessons, only: [:create]
   end
-  resources :lessons
+  resources :lessons, only: [:show, :update, :destroy]
 end

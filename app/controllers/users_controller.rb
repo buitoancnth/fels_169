@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :load_user, only: :show
   before_action :logged_in_user, only: [:index, :show]
+  @activities_by
 
   def new
     @user = User.new
@@ -11,6 +12,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @activities = Activity.activities_by(@user.id).order_by_activity.paginate page: params[:page], per_page: Settings.per_pages
   end
 
   def create

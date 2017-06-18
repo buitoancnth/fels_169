@@ -38,9 +38,9 @@ en:
   submit: "Submit"
   you_sure: "are you sure ?"
   words: "Words"
-  startlesson: "Start_lesson"
-  finishlesson: "Finish_lesson"
-  deletelesson: "Delete_lesson"
+  createlesson: "created"
+  finishlesson: "finished"
+  deletelesson: "deleted"
   message:
     update_failed: "Update failed"
     update_success: "Update success"

@@ -1,5 +1,6 @@
 module LessonsHelper
-    def result_status answer
+
+  def result_status answer
     if answer.nil?
       "default"
     elsif answer.is_correct

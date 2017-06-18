@@ -11,7 +11,7 @@ class LessonsController < ApplicationController
     @lesson = Lesson.new category_id: @category.id, user_id: current_user.id
     if @lesson.save
       flash[:success] = t "message.create_success"
-      make_activity t("startlesson"), "Lesson: #{@lesson.id}", current_user
+      make_activity t(:createlesson), @lesson
       redirect_to @lesson
     else
       failed_message = t "message.create_failed"
@@ -19,10 +19,11 @@ class LessonsController < ApplicationController
       redirect_to @category
     end
   end
+
   def update
     if @lesson && @lesson.update_attributes(lesson_params)
       flash[:success] = t "message.update_success"
-      make_activity t("startlesson"), "Lesson: #{@lesson.id}", current_user.id
+      make_activity t(:finishlesson), @lesson
     else
       if @lesson.present?
         failed_message = @lesson.errors
@@ -31,14 +32,12 @@ class LessonsController < ApplicationController
       end
       flash[:danger] = failed_message
     end
-
     redirect_to @lesson
   end
 
   def destroy
     @lesson.destroy
-    flash[:success] = t "message.delete_success"
-    make_activity t("startlesson"), "Lesson: #{@lesson.id}", current_user.id
+    make_activity t("deletelesson"), @lesson
     redirect_to @lesson.category
   end
 
