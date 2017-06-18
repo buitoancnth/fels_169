@@ -37,6 +37,9 @@ class ApplicationController < ActionController::Base
     request.format.json?
   end
 
-
+  def make_activity action_type, content_action, id
+    Activity.create! action_type: action_type,
+      content_action: content_action, user_id: id
+  end
 
 end

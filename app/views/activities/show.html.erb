@@ -1,0 +1,10 @@
+<div class="" style="margin-top: 100px;" >
+<% @activities.each do |activity| %>
+<%= t :you %>
+        <%= activity.action_type %>
+        <%= activity.content_action %>
+        - <%= t :at %>
+<%= time_ago_in_words activity.created_at %>
+-<%= t :ago %>
+<% end %>
+</div>
