@@ -6,7 +6,4 @@ class Category < ApplicationRecord
 
   scope :order_by_category, -> {order(created_at: :desc)}
 
-  def base_resource
-    "#{self.name},#{category_path self}"
-  end
 end

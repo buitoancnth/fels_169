@@ -41,6 +41,9 @@ en:
   createlesson: "created"
   finishlesson: "finished"
   deletelesson: "deleted"
+  lesson: "Lesson"
+  category: "Categorys"
+  destroy_user: "Deleted user: "
   message:
     update_failed: "Update failed"
     update_success: "Update success"

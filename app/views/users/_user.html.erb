@@ -12,4 +12,9 @@
   <td>
     <%= user.is_admin ? t("admin") : t("user") %>
   </td>
+  <td>
+    <% if current_user.is_admin %>
+      <%= link_to t("delete"), user, method: :delete, data: {confirm: "you sure ?"} %>
+    <% end %>
+  </td>
 </tr>

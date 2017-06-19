@@ -24,6 +24,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    user = User.find params[:id]
+    user.destroy
+    flash[:success] = t "message.delete_success"
+    make_activity t(:destroy_user), user
+    redirect_to users_path
+  end
+
   private
   def user_params
     params.require(:user).permit :name, :email, :password,:password_confirmation
