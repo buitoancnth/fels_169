@@ -11,6 +11,6 @@ module LessonsHelper
   end
 
   def result_lesson lesson
-    "#{[lesson.answers.correct.size, lesson.answers.size].join("/")} #{I18n.t("words")}"
+    "#{[lesson.answers.answer_correct.size, lesson.answers.size].join("/")} #{t("words")}"
   end
 end

@@ -36,8 +36,8 @@ class LessonsController < ApplicationController
   end
 
   def destroy
-    @lesson.destroy
     make_activity t("deletelesson"), @lesson
+    @lesson.destroy
     redirect_to @lesson.category
   end
 

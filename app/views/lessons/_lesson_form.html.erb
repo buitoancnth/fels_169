@@ -6,7 +6,7 @@
 <% if @lesson.is_learned %>
   <p>
     <b><%= t :correct_answer %>:</b>
-    <%= "#{@lesson.answers.correct.size}/#{@lesson.answers.size}"%>
+    <%= "#{@lesson.answers.answer_correct.size}/#{@lesson.answers.size}"%>
     <%= t "words" %>
   </p>
 <% end %>

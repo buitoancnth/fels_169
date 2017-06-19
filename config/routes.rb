@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
 
-
-
-  get 'activities/show'
-
+  get "activities/show"
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
@@ -23,4 +20,11 @@ Rails.application.routes.draw do
     resources :lessons, only: [:create]
   end
   resources :lessons, only: [:show, :update, :destroy]
+
+  namespace :admin do
+  resources :categories do
+      resources :words, except: [:index, :show]
+  end
+  resources :lessons, only: [:index, :destroy]
+  end
 end

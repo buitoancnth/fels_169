@@ -63,6 +63,6 @@ class User < ApplicationRecord
   end
 
   def base_resource
-    text_show = "#{name}"
+    text_show = "#{name} with ID: #{id}"
   end
 end

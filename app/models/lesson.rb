@@ -13,7 +13,7 @@ class Lesson < ApplicationRecord
   def base_resource
     if is_learned
       text_show = "\" lesson #{id} \" of category: \"#{category.name}\""
-      text_show = "#{answers.correct.size}/#{answers.size} words in #{text_show}"
+      text_show = "#{answers.answer_correct.size}/#{answers.size} words in #{text_show}"
     else
       text_show = "\" lesson #{id} \" of category: \"#{category.name}\""
     end
