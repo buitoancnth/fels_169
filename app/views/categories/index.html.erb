@@ -1,0 +1,9 @@
+<% provide :title, t("categories") %>
+<center><h2><%= t "categories" %></h2></center>
+<% @categories.each do |category|%>
+<div class="container-fluid bg-2 text-center">
+  <h3 class="margin"><%= category.name %></h3>
+  <p><%= t :Description %></p>
+  <%= link_to t("start"), "#", class: "btn btn-primary btn_start" %>
+</div>
+<% end %>

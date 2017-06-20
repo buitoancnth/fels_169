@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   end
   resources :relationships, only: [:create, :destroy]
   resources :words , only: [:index]
+  resources :categories
 end
