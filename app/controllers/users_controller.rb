@@ -1,12 +1,13 @@
 class UsersController < ApplicationController
   before_action :load_user, only: :show
+  before_action :logged_in_user, only: [:index, :show]
 
   def new
     @user = User.new
   end
 
   def index
-    @users = User.order_by_user.paginate page: params[:page], per_page: Settings.users_per_pages
+    @users = User.order_by_user.paginate page: params[:page], per_page: Settings.per_pages
   end
 
   def show

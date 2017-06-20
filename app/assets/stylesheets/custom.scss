@@ -180,5 +180,14 @@ h1 {
 }
 .table-striped th {
   background: blue;
-  text: center;
+  text-align: center;
+}
+.table-striped td {
+  text-align: center;
+}
+.dropdown_cate {
+  margin-top: 15px;
+}
+.btn_fil {
+  margin-top: 20px;
 }

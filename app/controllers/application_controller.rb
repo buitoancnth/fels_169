@@ -3,11 +3,11 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   private
+
   def logged_in_user
     unless logged_in?
       respond_to do |format|
-        store_location
-        message_please_login = t "message.please_login"
+        message_please_login = t "please_login"
         format.html do
           flash[:danger] = message_please_login
           redirect_to login_path
@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
     if logged_in?
       respond_to do |format|
         format.html do
-          flash[:danger] = t "message.please_logout"
+          flash[:danger] = t "please_logout"
           redirect_to root_path
         end
         format.json do

@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get "relationships/create"
-
-  get "relationships/destroy"
-
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
@@ -16,4 +12,5 @@ Rails.application.routes.draw do
     end
   end
   resources :relationships, only: [:create, :destroy]
+  resources :words , only: [:index]
 end

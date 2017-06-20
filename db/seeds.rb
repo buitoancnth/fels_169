@@ -1,20 +1,19 @@
 # Users
-User.create!(name:  "Bui Viet Toan",
+User.create!(name: "Bui Viet Toan",
              email: "buitoan@gmail.com",
-             password:              "123456",
+             password: "123456",
              password_confirmation: "123456",
-             is_admin:     true)
+             is_admin: true)
 
 99.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
   password = "password"
-  User.create!(name:  name,
+  User.create!(name: name,
                email: email,
-               password:              password,
+               password: password,
                password_confirmation: password)
 end
-
 
 # Following relationships
 users = User.all
@@ -23,3 +22,19 @@ following = users[2..50]
 followers = users[3..40]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
+
+6.times do
+  name = Faker::Name.title
+  cate = Category.create!(name: name)
+
+  40.times do
+    word = Category.all.sample.words.build content: Faker::Lorem.word
+    word.answers = [
+      Answer.new(content: Faker::Lorem.word, is_correct: true),
+      Answer.new(content: Faker::Lorem.word, is_correct: false),
+      Answer.new(content: Faker::Lorem.word, is_correct: false),
+      Answer.new(content: Faker::Lorem.word, is_correct: false)
+    ].shuffle
+    word.save!
+  end
+end
