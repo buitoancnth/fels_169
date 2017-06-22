@@ -33,4 +33,16 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def admin_user
+    unless logged_in? && current_user.is_admin?
+      flash[:danger] = t "not_admin"
+      redirect_to root_path
+    end
+  end
+
+  def make_activity action_type, content_action, user = current_user
+    Activity.create! action_type: action_type,
+     content_action: content_action.base_resource, user_id: user.id
+  end
+
 end

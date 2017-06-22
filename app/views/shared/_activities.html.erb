@@ -1,0 +1,8 @@
+<h3><%= t "activities" %></h3>
+<hr/>
+
+<% if activities.any? %>
+  <%= render activities  %>
+<% else %>
+  <%= t :no_items_found %>
+<% end %>

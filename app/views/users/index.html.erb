@@ -9,6 +9,9 @@
     <th><%= t :TenUser %></th>
     <th><%= t :Email %></th>
     <th><%= t :Type %></th>
+    <% if current_user.is_admin %>
+      <th><%= t :action %></th>
+    <% end %>
   </tr>
   <%= render @users %>
 </table>

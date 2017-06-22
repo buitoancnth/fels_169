@@ -12,4 +12,12 @@
   <td>
     <%= user.is_admin ? t("admin") : t("user") %>
   </td>
+  <% if current_user.is_admin %>
+    <td>
+      <%= link_to user, method: :delete,
+        class: "btn btn-danger btn-xs", data: {confirm: t(:you_sure)} do %>
+        <span class="glyphicon glyphicon-remove"></span> <%= t :delete %>
+      <% end %>
+    </td>
+  <% end %>
 </tr>
