@@ -6,3 +6,4 @@ size_small: 30
 per_pages: 10
 max_content: 50
 max_name_category: 100
+size_words: 10

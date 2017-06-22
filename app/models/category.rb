@@ -8,4 +8,5 @@ class Category < ApplicationRecord
   def base_resource
     "#{self.name},#{category_path self}"
   end
+
 end

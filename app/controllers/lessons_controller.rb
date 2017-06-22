@@ -61,5 +61,4 @@ class LessonsController < ApplicationController
     flash[:danger] = t "error"
     redirect_to root_path
   end
-
 end
