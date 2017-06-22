@@ -1,0 +1,11 @@
+<p>
+  <% if @user.present? %>
+    <%= @user.name %>
+  <% else %>
+    <%= current_user.name %>
+  <% end %>
+    <%= activity.action_type %>
+    <%= activity.content_action %>
+    - <%= t :at %>
+    <%= time_ago_in_words activity.created_at %>
+</p>
